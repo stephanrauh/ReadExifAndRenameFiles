@@ -13,6 +13,6 @@
     "exif-reader": "^1.0.2",
     "node-geocoder": "^3.22.0",
     "sleep": "^5.2.3",
-    "xml-js": "^1.6.7"
+    "xml-js": "^1.6.11"
   }
 }
