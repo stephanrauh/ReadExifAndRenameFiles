@@ -10,7 +10,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "exif-parser": "^0.1.12",
-    "exif-reader": "^1.0.2",
+    "exif-reader": "^1.0.3",
     "node-geocoder": "^3.22.0",
     "sleep": "^5.2.3",
     "xml-js": "^1.6.7"
