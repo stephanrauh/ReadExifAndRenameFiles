@@ -12,7 +12,7 @@
     "exif-parser": "^0.1.12",
     "exif-reader": "^1.0.3",
     "node-geocoder": "^3.27.0",
-    "sleep": "^6.1.0",
+    "sleep": "^6.2.0",
     "xml-js": "^1.6.11"
   }
 }
