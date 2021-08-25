@@ -67,11 +67,11 @@ async function parseHeicFile(file = 'some.heic') {
         newFile = newFile + ' ' + result;
       }
       newFile = newFile + '.heic';
-      console.log('uncomment line 85 to rename ' + newFile);
-      fs.renameSync(file, newFile);
+      console.log('uncomment line 71 and 75 to rename ' + newFile);
+      // fs.renameSync(file, newFile);
     });
   } else if (file !== newFile) {
-    console.log('rename ' + newFile);
+    console.log('uncomment line 71 and 75 to rename ' + newFile);
 //    fs.renameSync(file, newFile);
   }
 }

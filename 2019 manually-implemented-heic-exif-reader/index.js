@@ -1,9 +1,9 @@
 const fs = require('fs');
 const openstreetmap = require('./openstreetmap');
 
-const dir = '/Users/stephan/Dropbox/Photos/2019/Frankreich und Spanien'; // TODO put your image folder here
+const dir = '<your image folder>'; // TODO put your root image folder here
 
-let folder = [
+let subfolders = [
   '2019-09-14 Autun abends',
   '2019-09-15 Autun',
   '2019-09-16 Cluny',
@@ -32,7 +32,7 @@ let folder = [
 async function renameFolder(folderOrFile) {
   if (fs.statSync(folderOrFile).isFile()) {
     await openstreetmap.addInfoToFilename(folderOrFile);
-  } else if (!folder.includes('.DS_Store')) {
+  } else if (!subfolders.includes('.DS_Store')) {
     const files = fs.readdirSync(folderOrFile);
     for (var file of files) {
       await openstreetmap.addInfoToFilename(folderOrFile + '/' + file);
@@ -42,11 +42,12 @@ async function renameFolder(folderOrFile) {
 
 async function renameBatch(f) {
   const folders = fs.readdirSync(dir);
-  for (folder of folders) {
-    if (!folder.startsWith('.'))  {
-      await renameFolder(dir + '/' + folder);
+  for (subfolders of folders) {
+    if (!subfolders.startsWith('.'))  {
+      await renameFolder(dir + '/' + subfolders);
     }
   }
 }
 
+// renameFolder(dir);
 renameBatch();
